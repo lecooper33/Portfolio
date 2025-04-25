@@ -70,6 +70,7 @@ function App() {
         <Footer /> {/* Footer ajouté ici */}
       </Box>
     </ThemeProvider>
+    
   );
 }
 

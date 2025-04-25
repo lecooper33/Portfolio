@@ -90,6 +90,7 @@ const Projects = () => {
   };
 
   return (
+    <div id='projects'>
     <Box 
       component={motion.div}
       initial="hidden"
@@ -348,6 +349,7 @@ const Projects = () => {
         </Box>
       </Box>
     </Box>
+    </div>
   );
 };
 

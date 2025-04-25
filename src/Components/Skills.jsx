@@ -17,7 +17,8 @@ const skills = [
 
 const SkillBar = ({ level, color }) => {
   return (
-    <Box sx={{
+    
+    <Box  sx={{
       width: '100%',
       height: 10,
       backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -95,6 +96,7 @@ const Skills = () => {
   };
 
   return (
+    <div id='skills'>
     <Box sx={{
       width: '100%',
       padding: { xs: '3rem 1rem', md: '6rem 2rem' },
@@ -275,6 +277,7 @@ const Skills = () => {
         </Grid>
       </Box>
     </Box>
+    </div>
   );
 };
 
