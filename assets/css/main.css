@@ -19,7 +19,7 @@
 
 /* Couleurs globales – Les variables de couleur suivantes sont utilisées sur l'ensemble du site web. Les modifier ici changera le thème de couleurs du site entier */
 :root { 
-  --background-color:#FEECE6; /* Couleur de fond pour l'ensemble du site web, y compris les sections individuelles */
+  --background-color:#FFEAF1; /* Couleur de fond pour l'ensemble du site web, y compris les sections individuelles */
   --default-color: #272829; /* Couleur par défaut utilisée pour la majorité du texte sur l'ensemble du site */
   --heading-color: #5784BA; /* Couleur des titres, sous-titres et en-têtes dans tout le site */
   --accent-color: #0563bb; /* Couleur d’accent qui représente votre marque. Utilisée pour les boutons, liens et autres éléments devant ressortir */
@@ -40,18 +40,18 @@
 /* Préréglages de couleur – Ces classes permettent d’écraser les couleurs globales lorsqu’elles sont appliquées à une section ou un élément, permettant de réutiliser les mêmes combinaisons de couleurs */
 
 
-.light-background {
+/* .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
-}
+} */
 
-.dark-background {
+/* .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
+} */
 
 /* Smooth scroll */
 :root {
@@ -1464,4 +1464,83 @@ section,
 .starter-section {
   /* Add your styles here */
   
+}
+
+/* hero section  */
+
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+/* Hero Section avec fond noir et lignes animées */
+#hero {
+  position: relative;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: drawLines 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes drawLines {
+  0% {
+    background-position: 0 0, 0 0;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  100% {
+    background-position: 40px 40px, 40px 40px;
+    opacity: 0.1;
+  }
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Ajustements pour le texte dans la hero section */
+#hero h2 {
+  color: white;
+}
+
+#hero p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#hero .typed {
+  color: #5784BA; /* Garde la couleur d'accent pour le texte animé */
+}
+
+#hero .social-links a {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#hero .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Modification de la classe light-background pour la hero seulement */
+#hero.light-background {
+  --background-color: #000;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --contrast-color: #ffffff;
 }
