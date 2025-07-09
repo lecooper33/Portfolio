@@ -621,6 +621,11 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+.img-fluid{
+ text-shadow:0 0 2px 4px rgb(255, 255, 255) ;
+ z-index: 2;
+ position: relative;
+}
 
 /*--------------------------------------------------------------
 # Stats Section
